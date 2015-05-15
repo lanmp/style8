@@ -1,0 +1,84 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "../variables.less";
+@import "../mixins.less";
+
+@color: @brand-success;
+
+a {
+    color: @color; 
+    &:hover,
+        &:focus {
+        color: darken(@color, 10%);
+    }
+}
+
+// Navbar
+// -------------------------
+.navbar .nav > li.open > a span, 
+.navbar .nav > li.active > a span,
+.navbar .nav > li a.current span {
+    color: @color; }
+
+.navbar .nav-collapse .nav > li a.current .caret {
+    border-top-color: @color; }
+
+.navbar .nav-collapse .nav > li > a.current {
+    color: @color; }
+
+// Pills
+// -------------------------
+.nav-pills {
+    > li {
+        // Active state
+        &.active > a {
+            &,
+            &:hover,
+                &:focus {
+                background-color: @color;
+            }
+        }
+    }
+}
+
+// Dropdown menus
+// -------------------------
+.dropdown-menu{
+    > li > a {
+        &:hover,
+            &:focus {
+            color: @brand-success;
+        }
+    }
+    .divider {
+        background-color: @brand-success;
+    }
+} 
+
+.pagination {
+    > li > a,
+    > li > span {
+        color: @color; 
+    }
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+            &:focus {
+            background-color: @color;
+            border-color: @color;
+        }
+    }
+}
+
+.list-group-item{
+    &.active,
+    &.active:hover,
+        &.active:focus {
+        background-color: @color;
+        border-color: @color;
+    }
+}

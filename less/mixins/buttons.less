@@ -1,0 +1,80 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:focus,
+        &:hover,
+        &.focus,
+        &:active,
+        &.active,
+        .open > .dropdown-toggle&{
+        &,
+        &:hover,
+            &:focus,
+            &.focus {
+            color: @background;
+            background-color: @color;
+            border-color: @border;
+        }
+        .badge {
+            color: @color;
+            background-color: @background;
+        }
+    }
+    &:active,
+        &.active,
+        .open > .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+            color: @background;
+            background-color: @color;
+            border-color: @border;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+
+    &-outline {
+        background: transparent;
+        color: @background;
+        border-color: @border;
+        .caret {
+            border-top-color: @background; }
+        &:hover,
+            &:focus,
+            &:active,
+            &.focus,
+            &.active {
+            background: @background;
+            color: @color;
+            .caret{
+                border-top-color: @color;}
+        }
+    }
+}
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}
