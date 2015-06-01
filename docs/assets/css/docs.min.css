@@ -1423,17 +1423,17 @@ h1[id] {
     border: 1px solid #d6e9c6;
 }
 
-.bs-flaticons {
+.bs-icons {
     margin: 0 -10px 20px;
     overflow: hidden;
 }
 
-.bs-flaticons-list {
+.bs-icons-list {
     padding-left: 0;
     list-style: none;
 }
 
-.bs-flaticons li {
+.bs-icons li {
     float: left;
     width: 25%;
     height: 115px;
@@ -1445,31 +1445,31 @@ h1[id] {
     border: 1px solid #fff;
 }
 
-.bs-flaticons .flaticon {
+.bs-icons .icon {
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 24px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
-.bs-flaticons .flaticon-class {
+.bs-icons .icon-class {
     display: block;
     text-align: center;
     word-wrap: break-word;
 }
 
-.bs-flaticons li:hover {
+.bs-icons li:hover {
     color: #fff;
     background-color: #60c560;
 }
 
 @media (min-width:768px) {
-    .bs-flaticons {
+    .bs-icons {
         margin-right: 0;
         margin-left: 0;
     }
 
-    .bs-flaticons li {
+    .bs-icons li {
         width: 12.5%;
         font-size: 12px;
     };
@@ -1547,7 +1547,7 @@ h1[id] {
     margin-bottom: 0;
 }
 
-.bs-customizer-alert .flaticon {
+.bs-customizer-alert .icon {
     margin-right: 5px;
 }
 
@@ -1574,7 +1574,7 @@ h1[id] {
     margin-bottom: 5px;
 }
 
-.bs-dropzone .flaticon-download-alt {
+.bs-dropzone .icon-download-alt {
     font-size: 40px;
 }
 
@@ -1630,7 +1630,7 @@ h1[id] {
     margin-left: auto;
 }
 
-.bs-brand-item .flaticon {
+.bs-brand-item .icon {
     width: 30px;
     height: 30px;
     margin: 10px auto -10px;
@@ -1639,11 +1639,11 @@ h1[id] {
     border-radius: 50%;
 }
 
-.bs-brand-item .flaticon-ok {
+.bs-brand-item .icon-ok {
     background-color: #5cb85c;
 }
 
-.bs-brand-item .flaticon-remove {
+.bs-brand-item .icon-remove {
     background-color: #d9534f;
 }
 

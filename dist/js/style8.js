@@ -1,4 +1,4 @@
-/*! style8 2015-05-14 */
+/*! style8 2015-05-24 */
 /* ========================================================================
  * Bootstrap: transition.js v3.3.4
  * http://getbootstrap.com/javascript/#transitions
