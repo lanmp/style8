@@ -81,6 +81,24 @@ module.exports = function(grunt) {
         tasks: ['less','cssmin']
       }
     },
+	compress: {
+      main: {
+        options: {
+          archive: '<%= pkg.name %>-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: '<%= pkg.name %>-<%= pkg.version %>-dist'
+          }
+        ]
+      }
+    },
   });
   
   // 加载提供任务的插件。
@@ -90,5 +108,6 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:build']);
   grunt.registerTask('dist-css', ['less:compileCore','cssmin']);
   grunt.registerTask('default', ['clean:dist', 'copy:fonts']);
+  grunt.registerTask('release', ['dist-js', 'dist-css', 'compress']);
 
 };
