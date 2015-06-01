@@ -12,8 +12,9 @@ style8/
 │   ├── style8.js
 │   └── style8.min.js
 └── fonts/
-    ├── flaticon.eot
-    ├── flaticon.svg
-    ├── flaticon.ttf
-    └── flaticon.woff
+    ├── Linearicons-Free.eot
+    ├── Linearicons-Free.svg
+    ├── Linearicons-Free.ttf
+    ├── Linearicons-Free.woff
+    └── Linearicons-Free.woff2
 ```
