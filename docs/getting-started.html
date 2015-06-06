@@ -89,20 +89,68 @@
   <p class="lead">Style8 基于BS，使用方法基本一致,具体请参考BS文档。</p>
 
   <div class="row bs-downloads">
-    <div class="col-sm-12">
-      <h3 id="download-bootstrap">用于生产环境的 Style8</h3>
+    <div class="col-sm-6">
+      <h3 id="download-style8">用于生产环境的 Style8</h3>
       <p>编译并压缩后的 CSS、JavaScript 和字体文件。不包含文档和源码文件。</p>
       <p>
-        <a href="https://github.com/lanmp/style8/archive/gh-pages.zip" class="btn btn-lg btn-primary-outline" role="button">下载 Style8</a>
+        <a href="https://github.com/lanmp/style8/releases/download/3.3.4/style8-3.3.4-dist.zip" class="btn btn-lg btn-primary-outline" role="button">下载 Style8</a>
+      </p>
+    </div>
+	<div class="col-sm-6">
+      <h3 id="download-source">Style8 源码</h3>
+      <p>Less、JavaScript 和 字体文件的源码，并且带有文档。</p>
+      <p>
+        <a href="https://github.com/lanmp/style8/archive/3.3.4.zip" class="btn btn-lg btn-primary-outline" role="button">下载源码</a>
       </p>
     </div>
   </div>
 </div>
 
 <div class="bs-docs-section">
+  <h1 id="whats-included" class="page-header">包含的内容</h1>
+
+  <p class="lead">Style8 提供了两种形式的压缩包，在下载下来的压缩包内可以看到以下目录和文件，这些文件按照类别放到了不同的目录内，并且提供了压缩与未压缩两种版本。</p>
+
+  <h2 id="whats-included-precompiled">预编译版</h2>
+  <p>下载压缩包之后，将其解压缩到任意目录即可看到以下（压缩版的）目录结构：</p>
+<!-- NOTE: This info is intentionally duplicated in the README.
+Copy any changes made here over to the README too. -->
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">style8/
+├── css/
+│   ├── style8.css
+│   ├── style8.css.map
+│   └── style8.min.css
+├── js/
+│   ├── style8.js
+│   └── style8.min.js
+└── fonts/
+    ├── Linearicons-Free.eot
+    ├── Linearicons-Free.svg
+    ├── Linearicons-Free.ttf
+    ├── Linearicons-Free.woff
+    └── Linearicons-Free.woff2</code></pre></div>
+<!-- NOTE: This info is intentionally duplicated in the README.
+Copy any changes made here over to the README too. -->
+  <p>上面展示的就是 Style8 的基本文件结构：预编译文件可以直接使用到任何 web 项目中。我们提供了编译好的 CSS 和 JS (<code>style8.*</code>) 文件，还有经过压缩的 CSS 和 JS (<code>style8.min.*</code>) 文件。同时还提供了 CSS <a href="https://developers.google.com/chrome-developer-tools/docs/css-preprocessors">源码映射表</a> (<code>style8.*.map</code>) ，可以在某些浏览器的开发工具中使用。同时还包含了来自 Linearicons-Free 的图标字体。</p>
+
+  <h2 id="whats-included-source">Style8 源码</h2>
+  <p>Style8 源码包含了预先编译的 CSS、JavaScript 和图标字体文件，并且还有 LESS、JavaScript 和文档的源码。具体来说，主要文件组织结构如下：</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">style8/
+├── less/
+├── js/
+├── fonts/
+└── dist/
+    ├── css/
+    ├── js/
+    └── fonts/
+</code></pre></div>
+  <p><code>less/</code>、<code>js/</code> 和 <code>fonts/</code> 目录分别包含了 CSS、JS 和字体图标的源码。<code>dist/</code> 目录包含了上面所说的预编译 Style8 包内的所有文件。<code>docs/</code> 包含了所有文档的源码文件，<code>examples/</code> 目录是 Style8 官方提供的实例工程。除了这些，其他文件还包含 Style8 安装包的定义文件、许可证文件和编译脚本等。</p>
+</div>
+
+<div class="bs-docs-section">
   <h1 id="template" class="page-header">基本模板</h1>
 
-  <p class="lead">使用以下给出的这份超级简单的 HTML 模版，或者修改<a href="#examples">这些实例</a>。我们强烈建议你对这些实例按照自己的需求进行修改，而不要简单的复制、粘贴。</p>
+  <p class="lead">使用以下给出的这份超级简单的 HTML 模版。我们强烈建议你对这些实例按照自己的需求进行修改，而不要简单的复制、粘贴。</p>
 
   <p>拷贝并粘贴下面给出的 HTML 代码，这就是一个最简单的 Style8 页面了。</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -130,7 +178,7 @@
     <span class="c">&lt;!-- jQuery (necessary for Style8's JavaScript plugins) --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery/1.11.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/style8.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></div>
 </div>
@@ -144,6 +192,13 @@
               
                 <li>
   <a href="#download">下载</a>
+</li>
+<li>
+  <a href="#whats-included">包含的内容</a>
+  <ul class="nav">
+    <li><a href="#whats-included-precompiled">预编译版</a></li>
+    <li><a href="#whats-included-source">Style8 源码</a></li>
+  </ul>
 </li>
 <li>
   <a href="#template">基本模板</a>
